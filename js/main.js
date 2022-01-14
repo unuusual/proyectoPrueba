@@ -4,19 +4,19 @@ $(document).ready(()=>{
 
     $("#agregar").click(()=>{
         let lista = $("#listaCosas").val();
-        let listaTres;
+        let listaP1;
 
         if (lista != ""){
-            listaTres =  $(".textoHijo").append(
+            listaP1 =  $("#tarea").append(
                 "<div id='"+contador+"'><p class='t1'></p>"+lista+"<button class='verde ready' value='"+contador+"'>S</button><button class='rojo no' value='"+contador+"'>N</button></div>")
         }
 
         $(".ready").click(()=>{
-            $("#tareaHecha").append(listaTres); 
+            $("#tareaHecha").append(listaP1); 
         })
 
         $(".no").click(()=>{
-            $(listaTres).empty(); 
+            $(listaP1).empty(); 
         })
     })
 
@@ -24,43 +24,48 @@ $(document).ready(()=>{
 
     $("#agregarDos").click(()=>{
         let lista = $("#listaCosas").val();
-        let listaTres;
+        let listaP2;
         
         if (lista != ""){
-            listaTres = $(".textoHijo2").append("<p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button>")
+            listaP2 = $("#tarea2").append("<p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button>")
             
         }
 
         $(".ready").click(()=>{
-            $("#tareaHecha").append(listaTres); 
+            $("#tareaHecha").append(listaP2); 
         })
 
         $(".no").click(()=>{
-            $(listaTres).empty(); 
+            $(listaP2).empty(); 
         })
     })
 
 
-    
+
 
     $("#agregarTres").click(()=>{
         let lista = $("#listaCosas").val();
-        let listaTres;
+        let listaP3;
         
         if (lista != ""){
-            listaTres = $(".textoHijo3").append("<p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button>")
+            listaP3 = $("#tarea3").append("<p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button>")
             
         }
 
         $(".ready").click(()=>{
-            $("#tareaHecha").append(listaTres); 
+            $("#tareaHecha").append(listaP3); 
         })
 
         $(".no").click(()=>{
-            $(listaTres).empty(); 
+            $(listaP3).empty(); 
         })
+
     })
 
 })
+
+/* LA IDEA PRINCIPAL ERA HACER UN CONTADOR PARA PODER MATCHEAR EL VALOR DE LOS BOTONES, CON EL VALOR DEL DIV.
+
+ASI AL HACER CLICK AL BOTON CON EL VALOR 1, SE ELIMINABA EL DIV CON EL VALOR 1. Y ASI NO ME ELIMINA TODO */
 
 
