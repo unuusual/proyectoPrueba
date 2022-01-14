@@ -7,8 +7,7 @@ $(document).ready(()=>{
         let listaP1;
 
         if (lista != ""){
-            listaP1 =  $("#tarea").append(
-                "<div id='"+contador+"'><p class='t1'></p>"+lista+"<button class='verde ready' value='"+contador+"'>S</button><button class='rojo no' value='"+contador+"'>N</button></div>")
+            listaP1 =  $("#tarea").append("<p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button>")
         }
 
         $(".ready").click(()=>{
@@ -66,6 +65,9 @@ $(document).ready(()=>{
 
 /* LA IDEA PRINCIPAL ERA HACER UN CONTADOR PARA PODER MATCHEAR EL VALOR DE LOS BOTONES, CON EL VALOR DEL DIV..
 
-ASI AL HACER CLICK AL BOTON CON EL VALOR 1, SE ELIMINABA EL DIV CON EL VALOR 1. Y ASI NO ME ELIMINA TODO */
+ASI AL HACER CLICK AL BOTON CON EL VALOR 1, SE ELIMINABA EL DIV CON EL VALOR 1. Y ASI NO ME ELIMINA TODO 
+
+EJ:
+listaP3 = $("#tarea3").append("<div class="'+contador+'"></div><p>"+lista+"</p><button class='verde ready'>S</button><button class='rojo no'>N</button></div>")*/
 
 
